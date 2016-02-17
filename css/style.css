@@ -2,16 +2,28 @@ a {
 	text-decoration: none;
 }
 
-footer {
+
+.footer {
 	background-color: #1f1f20;
+	bottom: 0;
+	height:30px;
+	width: 100%;
+	padding-top: 10px;
+	position: fixed;
+	z-index: 10;
 }
+
+.footer p {
+	color: #ccc;
+	font-size: 12px;
+	font-weight: 300;
+}
+
 header {
-	height: 100px;
+	height: 110px;
 	width: 100vw;
 	background-color: #fff;
-	border-bottom: 1px solid #ccc;
 	position: fixed;
-	padding: 20px;
 	z-index: 10;
 }
 
@@ -21,33 +33,31 @@ header {
 	margin: 0 auto;
 }
 
-img {
-	display: block;
-	margin: 0 auto;
-	max-height: 200px;
-	max-width: 200px;
-}
-
 header img {
-	height: 100%;
-	width: auto;
 	display: inline;
+	margin-top: 15px;
+	height: 80%;
+	width: auto;
 }
 
-header nav {
+nav {
 	float: right;
 	list-style-type: none;
     margin: 0;
-    padding: 0;
-    padding-right: 10px;
+    padding: 32px 0;
     vertical-align: middle;
 }
 
 
-header nav a{
-	text-align: center;
+nav a{
+	color: #999;
     padding: 14px 16px;
+	text-align: center;
     text-decoration: none;
+}
+
+nav a:hover {
+	color: #e50b4f;
 }
 
 h1 {
@@ -72,4 +82,15 @@ h3 {
 p{
 	font-size: 18px;
 	text-align: center;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.hero {
+	background-image: url("../images/computer_keyboard_mouse_laptop_mac_apple_66734_3840x2160.jpg");
 }

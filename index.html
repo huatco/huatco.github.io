@@ -40,19 +40,26 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <header>
     <div class="nav-container">
-      <img src="images/huat_logo.png">
+      <a href="#home"><img src="images/huat_logo.png"></a>
       <nav>
-        <a href="#">What We Do</a>
-        <a href="#">Benefits</a>
-        <a href="#">About</a>
-        <a href="#">Team</a>
-        <a href="#">Advisors</a>
-        <a href="#">Sign Up Now</a>
+        <a href="#whatishuat">What We Do</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#mentors">Mentors</a>
+        <a class="button" href="#signup">Sign Up</a>
       </nav>
     </div>
   </header>
+  <div class="footer">
+    <p>Copyright Huat Co. 2016</p>
+  </div>
   <div id="fullpage">
-    <div class="section container"><h1>Prosperity, now within reach.</h1></div>
+    <div class="section hero">
+      <div class="container">
+        <h1>Prosperity, now within reach.</h1>
+      </div>
+    </div>
     <div class="section container">
       <h2>What is Huat</h2>
       <p>An online portfolio management service that provides automated, algorithm-based advice, rebalancing, and trade execution.</p>
@@ -143,22 +150,20 @@
       <h2>Interested in us?</h2>
       <p>Leave your email address with us, and we will keep you posted. </p>
       <form>
-        <label for="exampleEmailInput">Your email</label>
         <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
         <input type="submit" value="Submit">
       </form>
     </div>
   </div>
-  <footer>
-    <p>Copyright Huat Co. 2016</p>
-  </footer>
-
+  
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
         navigation: true,
+        anchors:['home', 'whatishuat', 'benefits', 'about', 'team', 'mentors', 'signup'],
+        
       });
     });
   </script>
