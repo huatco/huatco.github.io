@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 h1 {
-	color: #e50b4f;
+	color: #fff;
 	font-weight: 300;
 	font-size: 70px;
 	text-align: center;
@@ -72,11 +72,14 @@ h2 {
 	color: #e50b4f;
 	font-weight: 300;
 	font-size: 50px;
+	padding: 20px 0;
 }
 
 h3 {
 	color: #e50b4f;
 	text-align: center;
+	font-size: 25px;
+	padding: 15px 0;
 }
 
 p{
@@ -92,5 +95,17 @@ img {
 }
 
 .hero {
-	background-image: url("../images/computer_keyboard_mouse_laptop_mac_apple_66734_3840x2160.jpg");
+	background-image: url("../images/bg1.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+form {
+	text-align: center;
+}
+
+form input {
+	padding: 15px 0;
 }
