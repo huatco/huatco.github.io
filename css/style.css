@@ -36,7 +36,7 @@ header {
 header img {
 	display: inline;
 	margin-top: 15px;
-	height: 80%;
+	height: 75%;
 	width: auto;
 }
 
@@ -60,10 +60,10 @@ nav a:hover {
 	color: #e50b4f;
 }
 
+
 h1 {
 	color: #fff;
 	font-weight: 300;
-	font-size: 70px;
 	text-align: center;
 }
 
@@ -80,6 +80,7 @@ h3 {
 	text-align: center;
 	font-size: 25px;
 	padding: 15px 0;
+	margin-bottom: 0;
 }
 
 p{
@@ -113,3 +114,20 @@ form input {
 .sk-logo {
 	padding-top: 45px;
 }
+
+@media (max-width: 550px) {
+	nav {
+		display: none;
+	}
+
+	.nav-container {
+		width: 100%;
+	}
+
+	header img {
+		display: block;
+		margin: 0 auto;
+		margin-top: 15px;
+	}
+}
+
