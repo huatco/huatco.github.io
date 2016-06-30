@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Huat</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="fullPage/jquery.fullPage.css" />
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="fullPage/jquery.fullPage.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <header class="nav-container navbar-solid">
+    <a href="index.html"><img src="images/huat_logo_wo_tagline.png" id="logo-colour"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Contact</a>
+      <a href="#signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <div class="footer">
+    <p>Copyright Huat Co. 2016</p>
+  </div>
+  <div id="fullpage">
+    <div class="section contact-panel">
+      <h3>Get in touch</h3>
+      <div class="row">
+        <div class="four columns">
+          <div id="map"></div>
+        </div>
+        <div class="eight columns">
+          <h5>Address:</h5>
+          <p>
+            Singapore University of Technology and Design
+            <br>
+            8 Somapah Road Singapore 487372
+          </p>
+          <a href="https://www.facebook.com/huatco/" class="button" target="_blank">Find us on Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section signup">
+      <div class="container">
+        <h2>Interested in us?</h2>
+        <p>Leave your email address with us, and we will keep you posted. </p>
+        <form action="//huat.us12.list-manage.com/subscribe/post?u=9a49956a663df2052a741efe2&amp;id=1e1649650a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div class="row">
+            <div class="ten columns">
+              <input type="email" value="" name="EMAIL" class="u-full-width" id="mce-EMAIL" placeholder="john@example.com" required>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9a49956a663df2052a741efe2_1e1649650a" tabindex="-1" value=""></div>
+            <div class="two columns">
+              <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        navigation: false,
+        anchors:['contact','signup'],
+        responsiveWidth: 550,
+        scrollBar: true,
+      });
+    });
+  </script>
+  <script>
+    function initMap() {
+      var mapDiv = document.getElementById('map');
+      var map = new google.maps.Map(mapDiv, {
+          center: {lat: 1.340530, lng: 103.963185},
+          zoom: 15
+      });
+    }
+  </script>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCig-OVAjUXNToeiJ1yj64LW37czVQ1r-g&callback=initMap">
+  </script>
+</body>
+</html>
