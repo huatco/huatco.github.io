@@ -1,4 +1,5 @@
 @import "font-awesome-4.6.3/scss/font-awesome.scss";
+@import "hamburgers/hamburgers.scss";
 
 $huat-pink: #e50b4f;
 $huat-orange: #f85130;
@@ -9,7 +10,16 @@ $shady-gray: #999;
 $inactive-gray: #ccc;
 $nearly-white: #f2f2f2;
 
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: inline-block;
+}
+
 body {
+
   a {
     text-decoration: none;
     color: $huat-pink;
@@ -57,7 +67,7 @@ body {
 	width: 100%;
 	padding-top: 10px;
 	position: fixed;
-	z-index: 10;
+	z-index: 9;
 
   p {
     color: #ccc;
@@ -80,6 +90,7 @@ body {
     background-color: #fff;
     border-bottom: 1px solid $nearly-white;
     padding-bottom: 15px;
+    box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.1);
 
     nav {
       margin-top: 25px;
@@ -108,6 +119,10 @@ body {
     #logo-colour{
       display: inline-block;
     }
+  }
+
+  .mobileNav {
+    display: none;
   }
 
   img {
@@ -285,26 +300,139 @@ body {
   p {
     text-align: left;
   }
+
   #map {
     width: 100%;
     height: 300px;
     background-color: grey;
+    margin-bottom: 10px;
   }
 
 }
 
 @media (max-width: 550px) {
-	nav {
-		display: none;
-	}
+  .mobile {
+    display: inline-block;
+  }
+
+  .desktop {
+    display: none;
+  }
 
 	.nav-container {
 		width: 100%;
+
+    .hamburger {
+        position: absolute;
+        top: 25px;
+        right: 7px;
+        z-index: 11;
+        transition: all 0.5s ease;
+    }
+
+    .mobileNav {
+      display: block;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      text-align: center;
+      position: fixed;
+      padding-top: 150px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      a {
+        display: block;
+        font-size: 25px;
+        padding: 15px;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+      &.is-active {
+        visibility: visible;
+        background-color: transparentize(#fff, 0.05);
+        a {
+          opacity: 1;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+
+    &.navbar-solid {
+      #logo-colour {
+        display: block;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+
+      .hamburger {
+          top: 10px;
+      }
+    }
 	}
 
-	header img {
-		display: block;
-		margin: 0 auto;
-		margin-top: 15px;
-	}
+  .section {
+    text-align: center;
+    border-bottom: 2px solid $nearly-white;
+    padding: 10px 20px;
+  }
+
+  .homepanel{
+    h2 {
+      margin: 0;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  .feature {
+    .two {
+      width: 12%;
+      text-align: left;
+    }
+    .ten {
+      width: 88%;
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  .about-hero {
+    nav {
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .signup {
+    .container {
+      width: 100%;
+    }
+    form {
+      .columns {
+        text-align: center;
+      }
+    }
+  }
 }

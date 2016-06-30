@@ -39,9 +39,21 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <header class="nav-container">
+    <button class="hamburger hamburger--slider mobile" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <a href="#"><img src="images/huat_white.png" id="logo-white"></a>
     <a href="#"><img src="images/huat_logo_wo_tagline.png" id="logo-colour"></a>
-    <nav>
+    <div class="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#signup">Sign Up</a>
+      </ul>
+    </div>
+    <nav class="desktop">
       <a href="#">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -72,12 +84,12 @@
     </div>
     <div class="section homepanel">
       <div class="row">
+        <div class="five columns">
+          <img src="images/analytics.png" alt="" />
+        </div>
         <div class="seven columns">
           <h2>Track your goals real-time</h2>
           <p>Our analytics tools ensure that you keep track of your goals in real-time, making sure that you reach your deadlines and targets in a realistic and optimal way. Tell us what you want to achieve and we will show you how to get there. </p>
-        </div>
-        <div class="five columns">
-          <img src="images/analytics.png" alt="" />
         </div>
       </div>
     </div>
@@ -202,6 +214,11 @@
         // anchors:['home', 'whatishuat', 'benefits', 'about', 'team', 'mentors', 'signup'],
         responsiveWidth: 550,
         scrollBar: true,
+      });
+
+      $('.hamburger').click(function(){
+        $('.hamburger').toggleClass("is-active");
+        $('.mobileNav').toggleClass("is-active");
       });
     });
   </script>
